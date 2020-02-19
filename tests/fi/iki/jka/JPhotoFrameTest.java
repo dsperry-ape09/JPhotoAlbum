@@ -34,14 +34,14 @@ public class JPhotoFrameTest {
     @Test
     public void photoFrameTestSpeedSlow() throws Exception {
         FakePhotoFrame photoFrame = new FakePhotoFrame();
-        photoFrame.actionPerformed(new ActionEvent(photoFrame,0,JPhotoMenu.A_SLIDESHOW));
+        photoFrame.actionPerformed(new ActionEvent(photoFrame, 0, JPhotoMenu.A_SLIDESHOW));
         assertThat(photoFrame.lastInterval, equalTo(5000));
     }
 
     @Test
     public void photoFrameTestSpeedFast() throws Exception {
         FakePhotoFrame photoFrame = new FakePhotoFrame();
-        photoFrame.actionPerformed(new ActionEvent(photoFrame,0,JPhotoMenu.A_FASTSLIDESHOW));
+        photoFrame.actionPerformed(new ActionEvent(photoFrame, 0, JPhotoMenu.A_FASTSLIDESHOW));
         assertThat(photoFrame.lastInterval, equalTo(2000));
     }
 
@@ -57,10 +57,10 @@ public class JPhotoFrameTest {
             timerInterval = interval;
         }
     }
+
     @Test
     public void showTimer() {
         FakePhotoShow photoShow = new FakePhotoShow(new JPhotoCollection(), 500, null);
         assertThat(photoShow.timerInterval, equalTo(500));
-
     }
 }
