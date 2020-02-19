@@ -15,7 +15,7 @@ public class JPhotoFrameTest {
         }
 
         @Override
-        protected void startSlideShow2(int interval) {
+        protected void startSlideShowWithParameters(int interval) {
             lastInterval = interval;
         }
 
