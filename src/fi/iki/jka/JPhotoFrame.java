@@ -622,11 +622,11 @@ public class JPhotoFrame extends JFrame
         setTitle();
     }
 
-    public void startSlideShow() {
+    protected void startSlideShow() {
         startSlideShow2(5000);
     }
 
-    public void startFastSlideShow() {
+    protected void startFastSlideShow() {
         startSlideShow2(2000);
     }
 
